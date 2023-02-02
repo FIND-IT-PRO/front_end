@@ -10,14 +10,16 @@ import {
   Routes,
 } from 'react-router-dom';
 import Welcome from "./components/UserComponent/Welcome";
+import Home from "./components/Home";
 
 function App() {
 
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Login/>}/>
+        <Route path="/" element={<Home/>}/>
         <Route path="/welcome" element={<Welcome/>}/>
+        <Route path="/login" element={<Login/>}/>
       </Routes>
     </div>
     );
