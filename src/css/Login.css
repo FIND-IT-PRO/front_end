@@ -1,155 +1,220 @@
-body {
-    background-color: #9f9da7;
-    font-size: 1.6rem;
-    font-family: "Open Sans", sans-serif;
-    color: #2b3e51;
+  body{
+  position: relative;
+  width: 1250px;
+  height: 580px;
+  
   }
   
-  h2 {
-    font-weight: 300;
-    text-align: center;
+  /* Ellipse 2 */
+  
+  #elipse2{
+  position: absolute;
+  width: 55px;
+  height: 54px;
+  left: 239px;
+  top: 491px;
+  
   }
   
-  p {
-    position: relative;
+  /* Ellipse 15 */
+  
+  #elipse15
+  {
+  position: absolute;
+  width: 55px;
+  height: 54px;
+  left: 998px;
+  top: 162px;
+  
   }
   
-  a,
-  a:link,
-  a:visited,
-  a:active {
-    color: #3ca9e2;
-    -webkit-transition: all 0.2s ease;
-    transition: all 0.2s ease;
-  }
-  a:focus, a:hover,
-  a:link:focus,
-  a:link:hover,
-  a:visited:focus,
-  a:visited:hover,
-  a:active:focus,
-  a:active:hover {
-    color: #329dd5;
-    -webkit-transition: all 0.2s ease;
-    transition: all 0.2s ease;
+  /* Ellipse 16 */
+  
+  #elipse16
+  {position: absolute;
+  width: 55px;
+  height: 54px;
+  left: 878px;
+  top: 518px;
+  
   }
   
-  #login-form-wrap {
-    background-color: #fff;
-    width: 35%;
-    margin: 30px auto;
-    text-align: center;
-    padding: 20px 0 0 0;
-    border-radius: 4px;
-    box-shadow: 0px 30px 50px 0px rgba(0, 0, 0, 0.2);
+  /* Ellipse 12 */
+  
+  #elipse12
+  {position: absolute;
+  width: 55px;
+  height: 54px;
+  left: 823px;
+  top: 24px;
+  
   }
   
-  #login-form {
-    padding: 0 60px;
+  
+  /* Ellipse 4 */
+  
+  #elipse4
+  {position: absolute;
+  width: 52px;
+  height: 47px;
+  left: 1070px;
+  top: 317px;
+  
   }
   
-  input {
-    display: block;
-    box-sizing: border-box;
-    width: 100%;
-    outline: none;
-    height: 60px;
-    line-height: 60px;
-    border-radius: 4px;
+  
+  /* Ellipse 13 */
+  
+  #elipse13
+  {
+  position: absolute;
+  width: 65px;
+  height: 57px;
+  left: 202px;
+  top: 132px;
+  
   }
   
-  input[type="email"],
-  input[type="password"] {
-    width: 100%;
-    padding: 0 0 0 10px;
-    margin: 0;
-    color: #8a8b8e;
-    border: 1px solid #c2c0ca;
-    font-style: normal;
-    font-size: 16px;
-    -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
-    position: relative;
-    display: inline-block;
-    background: none;
-  }
-  input[type="email"]:focus,
-  input[type="password"]:focus {
-    border-color: #3ca9e2;
-  }
-  input[type="email"]:focus:invalid,
-  input[type="password"]:focus:invalid {
-    color: #cc1e2b;
-    border-color: #cc1e2b;
-  }
-  input[type="email"]:valid ~ .validation,
-  input[type="password"]:valid ~ .validation {
-    display: block;
-    border-color: #0C0;
-  }
-  input[type="email"]:valid ~ .validation span,
-  input[type="password"]:valid ~ .validation span {
-    background: #0C0;
-    position: absolute;
-    border-radius: 6px;
-  }
-  input[type="email"]:valid ~ .validation span:first-child,
-  input[type="password"]:valid ~ .validation span:first-child {
-    top: 30px;
-    left: 14px;
-    width: 20px;
-    height: 3px;
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-  }
-  input[type="email"]:valid ~ .validation span:last-child,
-  input[type="password"]:valid ~ .validation span:last-child {
-    top: 35px;
-    left: 8px;
-    width: 11px;
-    height: 3px;
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
+  /* Ellipse 5 */
+  #elipse5
+  {
+  position: absolute;
+  width: 179px;
+  height: 159px;
+  left: -69px;
+  top: 49px;
+  
   }
   
-  .validation {
-    display: none;
-    position: absolute;
-    content: " ";
-    height: 60px;
-    width: 30px;
-    right: 15px;
-    top: 0px;
+  /* Ellipse 7 */
+  
+  #elipse7
+  {
+  
+  position: absolute;
+  width: 286px;
+  height: 254px;
+  left: 294px;
+  top: -178px;
+  
   }
   
-  input[type="submit"] {
-    border: none;
-    display: block;
-    background-color: #3ca9e2;
-    color: #fff;
-    font-weight: bold;
-    text-transform: uppercase;
-    cursor: pointer;
-    -webkit-transition: all 0.2s ease;
-    transition: all 0.2s ease;
-    font-size: 18px;
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    text-align: center;
-  }
-  input[type="submit"]:hover {
-    background-color: #329dd5;
-    -webkit-transition: all 0.2s ease;
-    transition: all 0.2s ease;
+  /* Ellipse 10 */
+  
+  #elipse10
+  {position: absolute;
+  width: 208px;
+  height: 171px;
+  left: 1064px;
+  top: 426px;
+  
   }
   
-  #create-account-wrap {
-    background-color: #eeedf1;
-    color: #8a8b8e;
-    font-size: 14px;
-    width: 100%;
-    padding: 10px 0;
-    border-radius: 0 0 4px 4px;
+  /* Ellipse 9 */
+  
+  #elipse9
+  {position: absolute;
+  width: 197px;
+  height: 184px;
+  left: -59px;
+  top: 413px;
+  
+  }
+  
+  /* Ellipse 11 */
+  
+  #elipse11
+  {position: absolute;
+  width: 160px;
+  height: 162px;
+  left: 1112px;
+  top: -86px;
+  
+  }
+  
+  /* Ellipse 17 */
+  
+  #elipse17
+  {
+  position: absolute;
+  width: 160px;
+  height: 162px;
+  left: 515px;
+  top: 434px;
+  
+  }
+  
+  /* Ellipse 14 */
+  
+  #elipse14
+  {position: absolute;
+  width: 65px;
+  height: 57px;
+  left: 137px;
+  top: 335px;
+  
+  }
+  
+  
+  /* Rectangle 2 */
+  
+  #rect2
+  {
+  position: absolute;
+  width: 309px;
+  height: 358px;
+  left: 282px;
+  top: 106px;
+  z-index: 0;
+  background: rgba(56, 182, 255, 0.7);
+  border-radius: 42px;
+  opacity: 1;
+  }
+  
+  /* image 1 */
+  #vector
+  {
+  position: absolute;
+  width: 279px;
+  height: 215px;
+  left: 287px;
+  top: 184px;
+  }
+  /* Find_IT-removebg-preview 1 */
+  
+  #logo
+  {position: absolute;
+  width: 229px;
+  height: 163px;
+  left: 671px;
+  top: 95px;
+  z-index: 1;
+  
+  }
+  
+  
+  #rect1{
+  
+  position: absolute;
+  width: 435px;
+  height: 357px;
+  left: 557px;
+  top: 106px;
+  background: #D4ECFF;
+  padding: auto;
+  
+  
+  }
+  
+  
+  #loginform{
+      width: 100%;
+      margin: 30% auto;
+  }
+ 
+  
+  #login-footer{
+  
+  display: block ;
+  
   }
