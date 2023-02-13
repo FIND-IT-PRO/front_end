@@ -176,7 +176,7 @@ const Login: FunctionComponent<LoginProps> = () => {
           size="small"
           variant="standard"
         />
-                        </FormControl>
+      </FormControl>
 
       <FormControl fullWidth sx={{ m: 1 }}>
         <InputLabel htmlFor="standard-adornment-password">Password</InputLabel>

@@ -1,220 +1,116 @@
-  body{
-  position: relative;
-  width: 1250px;
-  height: 580px;
-  
-  }
-  
-  /* Ellipse 2 */
-  
-  #elipse2{
+
+
+#vector
+{
+  width: 85%;
+  height: 80%;
+  margin-top: 10%;
+  margin-left: 8%;
+
+
+}
+
+
+#rect2
+{
+position: absolute;
+width: 27%;
+height: 450px; 
+top: 80px;
+left: 15%;
+z-index: -1;
+border-radius: 42px 0 0 42px;
+background-color: #38B6FF;
+}
+
+
+#rect1{
+
   position: absolute;
-  width: 55px;
-  height: 54px;
-  left: 239px;
-  top: 491px;
-  
-  }
-  
-  /* Ellipse 15 */
-  
-  #elipse15
-  {
-  position: absolute;
-  width: 55px;
-  height: 54px;
-  left: 998px;
-  top: 162px;
-  
-  }
-  
-  /* Ellipse 16 */
-  
-  #elipse16
-  {position: absolute;
-  width: 55px;
-  height: 54px;
-  left: 878px;
-  top: 518px;
-  
-  }
-  
-  /* Ellipse 12 */
-  
-  #elipse12
-  {position: absolute;
-  width: 55px;
-  height: 54px;
-  left: 823px;
-  top: 24px;
-  
-  }
-  
-  
-  /* Ellipse 4 */
-  
-  #elipse4
-  {position: absolute;
-  width: 52px;
-  height: 47px;
-  left: 1070px;
-  top: 317px;
-  
-  }
-  
-  
-  /* Ellipse 13 */
-  
-  #elipse13
-  {
-  position: absolute;
-  width: 65px;
-  height: 57px;
-  left: 202px;
-  top: 132px;
-  
-  }
-  
-  /* Ellipse 5 */
-  #elipse5
-  {
-  position: absolute;
-  width: 179px;
-  height: 159px;
-  left: -69px;
-  top: 49px;
-  
-  }
-  
-  /* Ellipse 7 */
-  
-  #elipse7
-  {
-  
-  position: absolute;
-  width: 286px;
-  height: 254px;
-  left: 294px;
-  top: -178px;
-  
-  }
-  
-  /* Ellipse 10 */
-  
-  #elipse10
-  {position: absolute;
-  width: 208px;
-  height: 171px;
-  left: 1064px;
-  top: 426px;
-  
-  }
-  
-  /* Ellipse 9 */
-  
-  #elipse9
-  {position: absolute;
-  width: 197px;
-  height: 184px;
-  left: -59px;
-  top: 413px;
-  
-  }
-  
-  /* Ellipse 11 */
-  
-  #elipse11
-  {position: absolute;
-  width: 160px;
-  height: 162px;
-  left: 1112px;
-  top: -86px;
-  
-  }
-  
-  /* Ellipse 17 */
-  
-  #elipse17
-  {
-  position: absolute;
-  width: 160px;
-  height: 162px;
-  left: 515px;
-  top: 434px;
-  
-  }
-  
-  /* Ellipse 14 */
-  
-  #elipse14
-  {position: absolute;
-  width: 65px;
-  height: 57px;
-  left: 137px;
-  top: 335px;
-  
-  }
-  
-  
-  /* Rectangle 2 */
-  
-  #rect2
-  {
-  position: absolute;
-  width: 309px;
-  height: 358px;
-  left: 282px;
-  top: 106px;
-  z-index: 0;
-  background: rgba(56, 182, 255, 0.7);
-  border-radius: 42px;
-  opacity: 1;
-  }
-  
-  /* image 1 */
-  #vector
-  {
-  position: absolute;
-  width: 279px;
-  height: 215px;
-  left: 287px;
-  top: 184px;
-  }
-  /* Find_IT-removebg-preview 1 */
-  
-  #logo
-  {position: absolute;
-  width: 229px;
-  height: 163px;
-  left: 671px;
-  top: 95px;
-  z-index: 1;
-  
-  }
-  
-  
-  #rect1{
-  
-  position: absolute;
-  width: 435px;
-  height: 357px;
-  left: 557px;
-  top: 106px;
+  width: 44%;
+  height: 450px; 
+  right: 15%;
+  top: 80px;
+  margin-bottom: 20px;
   background: #D4ECFF;
   padding: auto;
   
   
   }
-  
-  
-  #loginform{
-      width: 100%;
-      margin: 30% auto;
+
+#logo
+{position: absolute;
+top: 5%;
+left: 40%;
+z-index: 1;
+
+}
+
+form{
+
+    width: 55%;
+    position: absolute;
+    left: 15%;
+    top:30%
+}
+
+#oauth{
+
+    margin-top: 30px;
+    padding-right: 100px;
+
+
+}
+
+#forgot-password{
+
+    position: absolute;
+    text-align: start;
+    left: 8%;
+    font-size:15px;
+    margin-top: 10px;
+}
+
+a {
+    text-decoration: none ;
   }
- 
-  
-  #login-footer{
-  
-  display: block ;
-  
+
+a>img{
+
+    margin-right:10px; 
+
+}
+
+#login-footer{
+
+    position: absolute;
+    top: 185%;
+    left: 100%;
+
+}
+
+@media only screen and (max-width: 800px) {
+  #rect2
+  {
+  display:none;
   }
+
+
+  #rect1
+  {
+    position: absolute;
+    width: 70%;
+    right: 15%;
+  }
+
+#logo
+{position: absolute;
+width: 100px;
+left: 40%;
+z-index: 1;
+
+}
+
+
+
+}
