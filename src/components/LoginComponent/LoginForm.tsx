@@ -1,46 +1,79 @@
-import { VisibilityOff, Visibility } from "@mui/icons-material";
-import { Button, FormControl, IconButton, Input, InputAdornment, InputLabel, TextField } from "@mui/material";
-import React from "react";
+import { VisibilityOff, Visibility, Password } from "@mui/icons-material";
+import {
+  Alert,
+  Button,
+  FormControl,
+  IconButton,
+  Input,
+  InputAdornment,
+  InputLabel,
+} from "@mui/material";
+import React, { FormEvent, useEffect, useRef, useState } from "react";
 import { FunctionComponent } from "react";
 import ForgotPassword from "./ForgotPassword";
+import { store } from "../../app/store";
+import {
+  LoginState,
+  submitLoginInformations,
+} from "../UserComponent/loginSlice";
+import { useSelector } from "react-redux";
+import { Navigate, useNavigate } from "react-router-dom";
+interface LoginFormProps {}
 
-
-interface LoginFormProps {
-    
-}
- 
 const LoginForm: FunctionComponent<LoginFormProps> = () => {
+  //Password show/hide
 
-    //Password show/hide
+  interface RootState {
+    login: LoginState;
+  }
+  const navigate = useNavigate();
+  const { error, login } = useSelector((state: RootState) => state.login);
+  if (login.isLogin) navigate("/", { replace: true });
+  console.log("🚀 ~ file: LoginForm.tsx:29 ~ login", login);
+  const [showPassword, setShowPassword] = React.useState(false);
 
-    const [showPassword, setShowPassword] = React.useState(false);
+  const handleClickShowPassword = () => setShowPassword((show) => !show);
 
-    const handleClickShowPassword = () => setShowPassword((show) => !show);
+  const handleMouseDownPassword = (
+    event: React.MouseEvent<HTMLButtonElement>
+  ) => {
+    event.preventDefault();
+  };
+  //handle login event
+  const userEmailRef = useRef<HTMLInputElement>();
+  const userPasswordRef = useRef<HTMLInputElement>();
 
-    const handleMouseDownPassword = (event: React.MouseEvent<HTMLButtonElement>) => {
-        event.preventDefault();
-    };
+  const formSubmitHandler = (e: FormEvent) => {
+    e.preventDefault();
+    const email: string = userEmailRef.current?.value!;
+    //todo checks
+    const password: string = userPasswordRef.current?.value!;
+    //todo checks
+    store.dispatch(submitLoginInformations({ email, password }));
+  };
 
-    
-    return ( 
-
-    <form>
+  return (
+    <>
+      <form onSubmit={formSubmitHandler}>
         <FormControl fullWidth sx={{ m: 3 }} variant="standard">
-            <TextField
-                required
-                id="filled-size-normal"
-                label="Username or Email"
-                variant="standard"
-                size="small"
-            />
+          <InputLabel htmlFor="standard-adornment-email">Email</InputLabel>
+          <Input
+            required
+            id="standard-adornment-email"
+            type="email"
+            inputRef={userEmailRef}
+          />
         </FormControl>
 
         <FormControl fullWidth sx={{ ml: 3 }} variant="standard">
-          <InputLabel htmlFor="standard-adornment-password">Password</InputLabel>
-          <Input 
+          <InputLabel htmlFor="standard-adornment-password">
+            Password
+          </InputLabel>
+          <Input
             required
             id="standard-adornment-password"
-            type={showPassword ? 'text' : 'password'}
+            type={showPassword ? "text" : "password"}
+            inputRef={userPasswordRef}
             endAdornment={
               <InputAdornment position="end">
                 <IconButton
@@ -57,11 +90,16 @@ const LoginForm: FunctionComponent<LoginFormProps> = () => {
 
         <ForgotPassword></ForgotPassword>
         <div id="login-footer">
-             <Button variant="outlined" size="small">Continue</Button>
+          <Button variant="outlined" type="submit" size="small">
+            Continue
+          </Button>
         </div>
-
-    </form>
+        <div className="error-box">
+          {error.isError ? <Alert severity="error">{error.message}</Alert> : ""}
+        </div>
+      </form>
+    </>
   );
-}
- 
+};
+
 export default LoginForm;
