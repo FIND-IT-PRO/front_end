@@ -7,13 +7,14 @@ import reportWebVitals from './reportWebVitals';
 import './index.scss';
 import { BrowserRouter } from 'react-router-dom';
 import axios from 'axios';
+import {REACT_APP_API_ENDPOINT} from './config.js'
 
 
 const container = document.getElementById('root')!;
 const root = createRoot(container);
 
 //add baseURL define in environement to axios
-axios.defaults.baseURL = process.env.REACT_APP_API_ENDPOINT
+axios.defaults.baseURL = REACT_APP_API_ENDPOINT
 
 root.render(
   <BrowserRouter>

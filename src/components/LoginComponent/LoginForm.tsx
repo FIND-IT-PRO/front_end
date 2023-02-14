@@ -57,7 +57,7 @@ const LoginForm: FunctionComponent<LoginFormProps> = () => {
 
         <ForgotPassword></ForgotPassword>
         <div id="login-footer">
-             <Button variant="outlined" size="small">Continue</Button>
+             <Button variant="outlined" sx={{pl:2,pr:2,pt:1,pb:1}} size="small">Continue </Button>
         </div>
 
     </form>

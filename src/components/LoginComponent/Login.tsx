@@ -13,7 +13,7 @@ const Login: FunctionComponent<LoginProps> = () => {
         <div id="login-side">
             <VectorRectangle></VectorRectangle>
             <div id="rect1">
-                <img src={Logo} alt="logo"width="100px" id="logo"/>
+                <img src={Logo} alt="find it logo" width="100px" id="logo"/>
                 <LoginForm></LoginForm>
             </div>
         </div>
