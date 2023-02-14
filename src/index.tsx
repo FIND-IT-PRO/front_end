@@ -1,19 +1,19 @@
-import React from "react";
-import { createRoot } from "react-dom/client";
-import { Provider } from "react-redux";
-import { store } from "./app/store";
-import App from "./App";
-import reportWebVitals from "./reportWebVitals";
-import "./index.scss";
-import { BrowserRouter } from "react-router-dom";
-import axios from "axios";
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import { Provider } from 'react-redux';
+import { store } from './app/store';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+import './index.scss';
+import { BrowserRouter } from 'react-router-dom';
+import axios from 'axios';
+import {REACT_APP_API_ENDPOINT} from './config.js'
 
 const container = document.getElementById("root")!;
 const root = createRoot(container);
 
 //add baseURL define in environement to axios
-// axios.defaults.baseURL = process.env.REACT_APP_API_ENDPOINTENDPOINT
-axios.defaults.baseURL = "http:localhost:8080/api/v1";
+axios.defaults.baseURL = REACT_APP_API_ENDPOINT
 
 root.render(
   <BrowserRouter>

@@ -7,15 +7,15 @@ import LoginForm from "./LoginForm";
 interface LoginProps {}
 
 const Login: FunctionComponent<LoginProps> = () => {
-  return (
-    <div id="login-side">
-      <VectorRectangle></VectorRectangle>
-      <div id="rect1">
-        <img src={Logo} alt="logo" width="100px" id="logo" />
-        <LoginForm></LoginForm>
-      </div>
-    </div>
-  );
-};
-
+    return (  
+        <div id="login-side">
+            <VectorRectangle></VectorRectangle>
+            <div id="rect1">
+                <img src={Logo} alt="find it logo" width="100px" id="logo"/>
+                <LoginForm></LoginForm>
+            </div>
+        </div>
+    );
+}
+ 
 export default Login;
