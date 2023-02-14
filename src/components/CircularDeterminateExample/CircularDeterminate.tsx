@@ -2,15 +2,15 @@ import * as React from "react";
 import Stack from "@mui/material/Stack";
 import CircularProgress from "@mui/material/CircularProgress";
 
-export default function CircularDeterminate() {
+function CircularDeterminate() {
   const [progress, setProgress] = React.useState(0);
 
   React.useEffect(() => {
     const timer = setInterval(() => {
       setProgress((prevProgress) =>
-        prevProgress >= 100 ? 0 : prevProgress + 10
+        prevProgress >= 100 ? 0 : prevProgress + 5
       );
-    }, 800);
+    }, 600);
 
     return () => {
       clearInterval(timer);
@@ -18,7 +18,7 @@ export default function CircularDeterminate() {
   }, []);
 
   return (
-    <Stack spacing={2} direction="row">
+    <Stack spacing={2} direction="column">
       <CircularProgress variant="determinate" value={25} />
       <CircularProgress variant="determinate" value={50} />
       <CircularProgress variant="determinate" value={75} />
@@ -27,3 +27,5 @@ export default function CircularDeterminate() {
     </Stack>
   );
 }
+
+export default CircularDeterminate;

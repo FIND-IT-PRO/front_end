@@ -1,0 +1,116 @@
+#vector {
+  width: 85%;
+  height: 80%;
+  margin-top: 10%;
+  margin-left: 8%;
+}
+
+#rect2 {
+  position: absolute;
+  width: 27%;
+  height: 450px;
+  top: 80px;
+  left: 15%;
+  z-index: -1;
+  border-radius: 42px 0 0 42px;
+  background-color: #38b6ff;
+}
+
+#rect1 {
+  position: absolute;
+  width: 44%;
+  height: 450px;
+  right: 15%;
+  top: 80px;
+  margin-bottom: 20px;
+  background: #d4ecff;
+  padding: auto;
+}
+
+#logo {
+  position: absolute;
+  top: 5%;
+  left: 40%;
+  z-index: 1;
+}
+
+form {
+  width: 55%;
+  position: absolute;
+  left: 15%;
+  top: 30%;
+}
+
+#oauth {
+  margin-top: 30px;
+  padding-right: 100px;
+}
+
+#forgot-password {
+  position: absolute;
+  text-align: start;
+  left: 8%;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a > img {
+  margin-right: 10px;
+}
+
+#login-footer {
+  position: absolute;
+  top: 185%;
+  left: 100%;
+}
+
+@media only screen and (max-width: 800px) {
+  #rect2 {
+    display: none;
+  }
+
+  #rect1 {
+    position: absolute;
+    width: 70%;
+    right: 15%;
+  }
+
+  #logo {
+    position: absolute;
+    width: 100px;
+    left: 40%;
+    z-index: 1;
+  }
+}
+
+.error-box {
+  margin: 1rem 0rem;
+  /* position: absolute; */
+}
+
+@media only screen and (max-width: 500px) {
+ 
+
+  #rect1
+  {
+    position: absolute;
+    width: 90%;
+    right: 5%;
+  }
+
+#logo
+{position: absolute;
+width: 100px;
+left: 40%;
+z-index: 1;
+
+}
+
+
+
+}
+

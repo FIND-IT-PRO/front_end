@@ -5,16 +5,24 @@ import { store } from './app/store';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './index.scss';
+import { BrowserRouter } from 'react-router-dom';
+import axios from 'axios';
+import {REACT_APP_API_ENDPOINT} from './config.js'
 
-const container = document.getElementById('root')!;
+const container = document.getElementById("root")!;
 const root = createRoot(container);
 
+//add baseURL define in environement to axios
+axios.defaults.baseURL = REACT_APP_API_ENDPOINT
+
 root.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
-  </React.StrictMode>
+  <BrowserRouter>
+    <React.StrictMode>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </React.StrictMode>
+  </BrowserRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function
