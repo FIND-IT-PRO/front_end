@@ -8,11 +8,12 @@ interface FooterProps {
  
 const Footer: FunctionComponent<FooterProps> = () => {
 
-    const team = "Find IT"
+    const team = "LSI"
+    const project = "Find It"
 
     return ( 
 
-        <footer>Made with <FavoriteIcon sx={{ fontSize: 15,color: red[500] }}></FavoriteIcon> In Morocco - &copy; {team}</footer>
+        <footer>&copy; All rights reserved by {project} 2023 - Made with <FavoriteIcon sx={{ fontSize: 15,color: red[500] }}></FavoriteIcon> by {team}</footer>
 
      );
 }

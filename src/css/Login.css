@@ -114,3 +114,26 @@ z-index: 1;
 
 
 }
+
+@media only screen and (max-width: 500px) {
+ 
+
+  #rect1
+  {
+    position: absolute;
+    width: 90%;
+    right: 5%;
+  }
+
+#logo
+{position: absolute;
+width: 100px;
+left: 40%;
+z-index: 1;
+
+}
+
+
+
+}
+

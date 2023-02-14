@@ -1,4 +1,3 @@
-import { verify } from "crypto";
 import { FunctionComponent } from "react";
 import Vector from '../../assets/login/vector.svg';
 
