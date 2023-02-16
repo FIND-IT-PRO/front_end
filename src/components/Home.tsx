@@ -1,6 +1,5 @@
 import axios from "axios";
 import React, { FunctionComponent, useEffect, useState } from "react";
-import { idText } from "typescript";
 
 let post = {
   _id: "",
