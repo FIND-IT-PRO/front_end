@@ -1,12 +1,14 @@
 import { FunctionComponent } from "react";
 import "../../css/Login.css";
 import VectorRectangle from "./VectorRectangle";
-import Logo from "../../assets/login/logo1.png";
 import LoginForm from "./LoginForm";
+import Logo from '../../assets/login/logo1.png'
 
 interface LoginProps {}
 
 const Login: FunctionComponent<LoginProps> = () => {
+
+
     return (  
         <div id="login-side">
             <VectorRectangle></VectorRectangle>

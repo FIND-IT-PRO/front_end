@@ -1,11 +1,13 @@
 import { FunctionComponent } from "react";
-import Vector from '../../assets/login/vector.svg';
-
+import Vector from '../../assets/login/vector.svg'
 interface VectorRectangleProps {
     
 }
  
 const VectorRectangle: FunctionComponent<VectorRectangleProps> = () => {
+
+   
+
     return (
 
         <div id="rect2">

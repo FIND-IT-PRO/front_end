@@ -1,4 +1,6 @@
 import { VisibilityOff, Visibility, Password } from "@mui/icons-material";
+import { ToastContainer, toast } from 'react-toastify';    
+import 'react-toastify/dist/ReactToastify.css';
 import {
   Alert,
   Button,
@@ -52,6 +54,22 @@ const LoginForm: FunctionComponent<LoginFormProps> = () => {
     store.dispatch(submitLoginInformations({ email, password }));
   };
 
+  //show error with timeout
+
+  const [ isAlertVisible, setIsAlertVisible ] = React.useState(false);
+
+  const ifErrorExist = () => {
+
+    if(error.isError){
+          setIsAlertVisible(true);
+
+          setTimeout(() => {
+              setIsAlertVisible(false);
+          }, 4000);
+        }
+  }
+
+
   return (
     <>
       <form onSubmit={formSubmitHandler}>
@@ -90,12 +108,13 @@ const LoginForm: FunctionComponent<LoginFormProps> = () => {
 
         <ForgotPassword></ForgotPassword>
         <div id="login-footer">
-          <Button variant="outlined" type="submit" size="small">
+          <Button variant="outlined" type="submit" size="small" onClick={ifErrorExist}>
             Continue
           </Button>
         </div>
         <div className="error-box">
-          {error.isError ? <Alert severity="error">{error.message}</Alert> : ""}
+          {error.isError ? isAlertVisible && <Alert severity="error">{error.message}</Alert> : ""}
+          {/* {error.isError ? toast('error.message') : ""} */}
         </div>
       </form>
     </>
